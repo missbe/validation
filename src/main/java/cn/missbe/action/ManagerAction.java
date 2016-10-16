@@ -34,9 +34,9 @@ public class ManagerAction {
 		if(null != validatedList){
 			System.out.println("----用户列表---- ");
 			for (String[] strings : validatedList) {
-				for (String string : strings) {
-					System.out.println(string+" -- ");
-				}
+//				for (String string : strings) {
+//					System.out.println(string+" -- ");
+//				}
 		       strings[strings.length-1]=validate.equals("in") ?"已签到":"未签到";
 			}
 			
@@ -49,6 +49,9 @@ public class ManagerAction {
 			ServletActionContext.getRequest().setAttribute("message","----无签到用户列表---");///表头
 //			return "tooltip";
 		}	
+		return "success";
+	}
+	public String execute(){
 		return "success";
 	}
 	public String getValidate() {

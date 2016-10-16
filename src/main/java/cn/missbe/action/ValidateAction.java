@@ -45,7 +45,7 @@ public class ValidateAction extends ActionSupport {
 			ServletActionContext.getRequest().setAttribute("list", contents);
 			return SUCCESS;
 		}else{
-			ServletActionContext.getRequest().setAttribute("message","---信息未找到-核验是否输入正确或者验证方式不正确---");
+			ServletActionContext.getRequest().setAttribute("message","-信息未找到-核验输入是否正确或者验证方式是否正确-");
 			return "tooltip";//提示用户信息错误，重新输入
 		}		
 //		System.out.println(switchParam+":"+inputParam);

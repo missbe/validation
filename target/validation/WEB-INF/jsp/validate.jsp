@@ -61,7 +61,7 @@ th{
   font-size:18px;
 }
 </style>
-<link rel="shortcut icon" href="${basePath }static/dist/img/favicon.ico">
+<link rel="shortcut icon" href="${basePath }static/img/favicon.ico">
 </head>
 <body>
 	<div class="navbar navbar-default" id="navbar">

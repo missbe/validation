@@ -28,7 +28,7 @@ th{
 </style>
 <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel="shortcut icon" href="${basePath }static/dist/img/favicon.ico">
+<link rel="shortcut icon" href="${basePath }static/img/favicon.ico">
 </head>
 <body>
 	<div class="container" style="margin-top:60px;">
