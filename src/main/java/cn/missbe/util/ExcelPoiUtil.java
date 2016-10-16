@@ -232,7 +232,9 @@ public class ExcelPoiUtil {
         for (int i = 1; i <= rowNum; i++) {
             row = sheet.getRow(i);
             ///查询指定学号ID号码的用户
-            int key=(int)Float.parseFloat(getCellFormatValue(row.getCell(colNum-1)).trim());
+        
+            int key=(int)row.getCell(colNum-1).getNumericCellValue();
+             
             if(KeyWord == key){
             	int j = 0;
             	String[] content=new String[colNum];
