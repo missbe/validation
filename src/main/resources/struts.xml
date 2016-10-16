@@ -11,26 +11,31 @@
     <package name="default" namespace="/"  extends="struts-default">            
        <action name="admin" class="cn.missbe.action.UserAction">
             <result name="success">/WEB-INF/jsp/index.jsp</result>
+            <result name="tootip">/WEB-INF/jsp/tooltip.jsp</result>
             <result name="input">/login.jsp</result>   
-       </action>     
+       </action>    
+       <action name="logout" class="cn.missbe.action.UserAction" method="logout">
+            <result name="success">/login.jsp</result>          
+            <result name="input">/login.jsp</result>
+       </action>   
        
        <action name="validate" class="cn.missbe.action.ValidateAction">
             <result name="success">/WEB-INF/jsp/message.jsp</result>
-            <result name="message">/WEB-INF/jsp/tooltip.jsp</result>
+            <result name="tooltip">/WEB-INF/jsp/tooltip.jsp</result>
             <result name="input">/index.jsp</result>
        </action>  
        
-       <action name="list-validatedin" class="cn.missbe.action.ValidateAction" method="">
-            <result name="success">/WEB-INF/jsp/list-validatedin.jsp</result>
-            <result name="message">/WEB-INF/jsp/tooltip.jsp</result>
+       <action name="list" class="cn.missbe.action.ManagerAction" method="listValidatedIn">
+            <result name="success">/WEB-INF/jsp/validate.jsp</result>
+            <result name="tooltip">/WEB-INF/jsp/tooltip.jsp</result>
             <result name="input">/login.jsp</result>
        </action>  
        
-       <action name="list-validatedout" class="cn.missbe.action.ValidateAction" method="">
-            <result name="success">/WEB-INF/jsp/list-validatedout.jsp</result>
-            <result name="message">/WEB-INF/jsp/tooltip.jsp</result>
+       <action name="index" class="cn.missbe.action.ManagerAction">
+            <result name="success">/WEB-INF/jsp/index.jsp</result>    
+            <result name="tooltip">/WEB-INF/jsp/tooltip.jsp</result>      
             <result name="input">/login.jsp</result>
-       </action>
+       </action>  
        
     </package>
     <!-- Add packages here -->
