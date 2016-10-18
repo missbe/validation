@@ -26,7 +26,7 @@ public class ValidateAction extends ActionSupport {
 //		switchParam="phone";
 //		inputParam="123456";
 		String[] contents=null;
-		String[] title=serviceI.getExcelTitle();///获取Excel的表头
+		String[] title=serviceI.getExcelTitle();///获取Excel的标题
 		if(null == switchParam || null == inputParam){
 		    ServletActionContext.getRequest().setAttribute("message","----请正确输入相关信息---");
 			return "tooltip";
@@ -38,10 +38,11 @@ public class ValidateAction extends ActionSupport {
 		}
 		if(null != contents){		
 			for(int i=0;i<contents.length;i++){
-				contents[i] = title[i]+"---" + contents[i];
+				contents[i] = title[i]+","+ contents[i];
 				System.out.println(contents[i]+" -- ");
 			}
-		    contents[contents.length-1]="是否签到---已签到"; 
+		    contents[contents.length-1]="是否签到,已签到"; 
+//		    ServletActionContext.getRequest().setAttribute("title",title);
 			ServletActionContext.getRequest().setAttribute("list", contents);
 			return SUCCESS;
 		}else{
