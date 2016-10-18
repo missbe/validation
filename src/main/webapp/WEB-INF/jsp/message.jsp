@@ -56,10 +56,11 @@ th{
 				<table class="table table-hover table-bordered ">
 					<tbody>
 						<c:if test="${null != requestScope.list }">
-							<c:forEach var="item" items="${requestScope.list }" step="1"
-								varStatus="var">
+							<c:forEach var="items" items="${requestScope.list }" step="1">
 								<tr>
-									<td class="text-center text-success">${item  }</td>
+								<c:forTokens items="${items }" var="item" delims=",">								
+									<td class="text-center text-success"><c:out value="${item }"/></td>								
+								</c:forTokens>
 								<tr>
 							</c:forEach>
 						</c:if>
